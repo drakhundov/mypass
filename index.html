@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="root">
+        <p id="error-message"></p>
+        <form action="/" method="GET" id="form" class="parameters">
+            <!-- 1. Length -->
+            <!-- 2. Use numbers? -->
+            <!-- 3. Use special characters? -->
+            <div class="label-input">
+                <label for="pw-length">How long should the password be (# of characcters)?</label>
+                <input class="align-right" type="number" id="pw-length" name="pw-length">
+            </div>
+            <div class="label-input">
+                <input type="checkbox" id="use-digits" name="use-digits">
+                <label class="checkbox-label" for="use-digits">Use digits</label>
+            </div>
+            <div class="label-input">
+                <input type="checkbox" id="use-special-chars" name="use-special-chars">
+                <label class="checkbox-label" for="use-special-chars">Use special characters</label>
+            </div>
+            <!-- TODO: if checked, offer an input for special characters. (Use hidden to reveal one). -->
+            <button id="generate-button">Generate</button>
+        </form>
+        <p>Your password is: <span id="generated-pw"></span></p>
+    </div>
+</body>
+
+</html>
